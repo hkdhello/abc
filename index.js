@@ -1,7 +1,7 @@
 var myList = document.getElementsByTagName("LI");
     var i;
     for (i = 0; i < myList.length; i++) {
-      var span = document.createElement("SPAN");
+      var span = document.createElement("button");
       var txt = document.createTextNode("\u00D7");
       span.className = "close";
       span.appendChild(txt);
@@ -16,16 +16,6 @@ var myList = document.getElementsByTagName("LI");
         div.style.display = "none";
       }
     }
-
-//     function loadToDos() {
-//         const db = window.localStorage;
-//         const list = document.getElementsByClassName("close");
-//         Object.keys(db).forEach((inputValue) => {
-//           const node = document.createRange().createContextualFragment(db.getItem(inputValue));
-//            list.appendChild(node);
-//         });
-//    }
-
     var list = document.querySelector('ul');
     list.addEventListener('click', function(ev) {
       if (ev.target.tagName === 'LI') {
@@ -43,7 +33,7 @@ var myList = document.getElementsByTagName("LI");
         }
         document.getElementById("myInput").value = "";
       
-        var span = document.createElement("SPAN");
+        var span = document.createElement("button");
         var txt = document.createTextNode("\u00D7");
         span.className = "close";
         span.appendChild(txt);

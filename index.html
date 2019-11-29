@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <base href="file:///C:/Users/chinn/Desktop/WEB/To-Do/">
@@ -35,7 +35,7 @@ ul li {
 }
 
 ul li:hover {
-  background: #ddd; /* Darker background-color on hover */
+  background: #ddd;
 }
 
 ul li.checked {
@@ -105,6 +105,15 @@ input {
   border-radius: 0;
 }
 
+ul > li {
+  animation: swing-in 0.5s ease-in 0.1s 1 forwards;
+}
+
+@keyframes swing-in{
+  0%   {background-color: red; left:0px;}
+  50%  {background-color: yellow; left:200px;}
+  100% {background-color: red; left:0px;}
+}
 .addBtn:hover {
   background-color: #bbb;
 }
@@ -114,14 +123,12 @@ input {
 
 <div id="myDIV" class="header">
   <input type="text" id="myInput" placeholder="Add a ToDo item">
-  <span onclick="newElement()" class="addBtn">Add</span>
+  <button onclick="newElement()" class="addBtn">Add</button>
 </div>
 
 <ul id="myUL">
   
 </ul>
-
-
 
 <script src="index.js">  </script>
 </body>
